@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZSOS IT Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { scroll-behavior: smooth; }
+  .hero-section {
+    background: linear-gradient(rgba(0, 1, 153, 0.8), rgba(0, 1, 153, 0.8)); 
+    /* Blue gradient background */
+    height: 40vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  }
+  .hero-text { 
+    color: white; 
+    text-align: center; 
+  }
+  .section-title { 
+    font-weight: 70; 
+    margin-bottom: 4px; 
+  }
+  .service-card, .pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover, .pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+  }
+</style>
+
+</head>
+<body>
+
+<!-- Hero Section -->
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="hero-text">
+    <h1 class="display-3 fw-bold animate-fade">ZSOS IT Solutions</h1>
+    <p class="lead animate-slide">Transforming Businesses with Technology</p>
+    <img src="images/logo.jpg" alt="ZSOS Logo" style="position:absolute; top:15px; left:20px; height:50px;">
+
+    <!-- WhatsApp link with pre-filled text -->
+ <a href="https://wa.me/916369965602?text=Hi%20ZSOS%20IT%20Solutions%2C%20I%20want%20to%20enquire%20about%20your%20services."
+   class="btn btn-warning btn-lg animate-bounce" target="_blank">
+   Get Started
+</a>
+
+  </div>
+</section>
+<!-- Social Buttons Center -->
+<div style="display:flex; justify-content:center; gap:15px; margin-top:10px;">
+  <a href="https://instagram.com/yourprofile" target="_blank" class="social-btn ig">
+    <i class="bi bi-instagram"></i>
+  </a>
+  <a href="https://youtube.com/yourchannel" target="_blank" class="social-btn yt">
+    <i class="bi bi-youtube"></i>
+  </a>
+  <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-btn ln">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">About Us</h2>
+      <p class="mb-4">
+        ZSOS IT Solutions is a global technology company delivering innovative digital products, 
+        IT services, and consulting to businesses worldwide.
+      </p>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5> Years Experience</h5><p>Trusted expertise in IT services.</p></div></div>
+        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5>10+ Team Members</h5><p>Passionate experts ready to help.</p></div></div>
+        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5>10+ Clients</h5><p>Worldwide network of satisfied customers.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card p-4 border rounded shadow">
+            <h5>Web Development</h5>
+            <p>Responsive, fast, and secure websites built with modern technologies.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4 border rounded shadow">
+            <h5>Cloud Solutions</h5>
+            <p>Reliable cloud architecture, migration, and management services.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card p-4 border rounded shadow">
+            <h5>Cybersecurity</h5>
+            <p>End-to-end protection against evolving digital threats.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz Section -->
+<section id="quiz" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="section-title text-primary">Take a Quiz</h2>
+    <p class="mb-4">Select a quiz and test your skills.</p>
+
+    <!-- Buttons to switch -->
+    <div class="mb-4">
+      <button class="btn btn-primary mx-2" onclick="showQuiz('pythonQuiz')">Python Quiz</button>
+      <button class="btn btn-primary mx-2" onclick="showQuiz('javaQuiz')">Java Quiz</button>
+      <button class="btn btn-primary mx-2" onclick="showQuiz('cQuiz')">C Quiz</button>
+      <button class="btn btn-primary mx-2" onclick="showQuiz('cppQuiz')">C++ Quiz</button>
+    </div>
+
+    <!-- Python Quiz -->
+    <form id="pythonQuiz" class="quiz-box d-none">
+      <h4>Python Quiz</h4>
+      <div class="quiz-question">
+        <p>1. Who developed Python?</p>
+        <label><input type="radio" name="q1" value="a"> Guido van Rossum</label><br>
+        <label><input type="radio" name="q1" value="b"> James Gosling</label><br>
+        <label><input type="radio" name="q1" value="c"> Dennis Ritchie</label><br>
+        <label><input type="radio" name="q1" value="d"> Bjarne Stroustrup</label>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. File extension for Python?</p>
+        <label><input type="radio" name="q2" value="a"> .java</label><br>
+        <label><input type="radio" name="q2" value="b"> .c</label><br>
+        <label><input type="radio" name="q2" value="c"> .cpp</label><br>
+        <label><input type="radio" name="q2" value="d"> .py</label>
+      </div>
+
+      <!-- Add 8 more questions same way -->
+
+      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('pythonQuiz')">Submit</button>
+    </form>
+
+    <!-- Java Quiz -->
+    <form id="javaQuiz" class="quiz-box d-none">
+      <h4>Java Quiz</h4>
+      <div class="quiz-question">
+        <p>1. Who developed Java?</p>
+        <label><input type="radio" name="q1" value="a"> Guido van Rossum</label><br>
+        <label><input type="radio" name="q1" value="b"> James Gosling</label><br>
+        <label><input type="radio" name="q1" value="c"> Dennis Ritchie</label>
+      </div>
+      <!-- Add more questions here -->
+      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('javaQuiz')">Submit</button>
+    </form>
+
+    <!-- C Quiz -->
+    <form id="cQuiz" class="quiz-box d-none">
+      <h4>C Quiz</h4>
+      <div class="quiz-question">
+        <p>1. Who developed C?</p>
+        <label><input type="radio" name="q1" value="a"> Dennis Ritchie</label><br>
+        <label><input type="radio" name="q1" value="b"> James Gosling</label>
+      </div>
+      <!-- Add more questions -->
+      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('cQuiz')">Submit</button>
+    </form>
+
+    <!-- C++ Quiz -->
+    <form id="cppQuiz" class="quiz-box d-none">
+      <h4>C++ Quiz</h4>
+      <div class="quiz-question">
+        <p>1. Who developed C++?</p>
+        <label><input type="radio" name="q1" value="a"> Bjarne Stroustrup</label><br>
+        <label><input type="radio" name="q1" value="b"> Dennis Ritchie</label>
+      </div>
+      <!-- Add more questions -->
+      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('cppQuiz')">Submit</button>
+    </form>
+
+    <!-- Result Box -->
+    <div id="resultBox" class="mt-4 d-none">
+      <h4 id="resultText"></h4>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Why Choose Us?</h2>
+      <div class="row g-4">
+        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>24/7 Support</h6><p>Always here when you need us.</p></div></div>
+        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Innovation</h6><p>Cutting-edge solutions tailored to you.</p></div></div>
+        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Scalability</h6><p>Solutions that grow with your business.</p></div></div>
+        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Security</h6><p>Top-notch cybersecurity at every layer.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- Technologies Section -->
+  <section id="technologies" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Technologies We Use</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/html-5.png"/><p>HTML5</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/css3.png"/><p>CSS3</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/javascript.png"/><p>JavaScript</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/react-native.png"/><p>React</p></div></div>
+      </div>
+      <div class="row g-4 mt-4">
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/python.png"/><p>Python</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png"/><p>Java</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/nodejs.png"/><p>Node.js</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-3 border rounded shadow"><img src="https://img.icons8.com/color/96/mysql-logo.png"/><p>MySQL</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Our Portfolio</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow service-card">
+            <img src="https://picsum.photos/400/250?1" class="img-fluid rounded mb-3" alt="project">
+            <h5>Corporate Website</h5>
+            <p>Custom web platforms for enterprise-level clients.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow service-card">
+            <img src="https://picsum.photos/400/250?2" class="img-fluid rounded mb-3" alt="project">
+            <h5>E-commerce Solutions</h5>
+            <p>Seamless online stores with secure payment gateways.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow service-card">
+            <img src="https://picsum.photos/400/250?3" class="img-fluid rounded mb-3" alt="project">
+            <h5>Mobile Applications</h5>
+            <p>iOS & Android apps built with user experience in mind.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-primary text-center">Case Studies</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="p-4 border rounded shadow">
+            <h5>Retail Chain Transformation</h5>
+            <p>We helped a global retail brand migrate to cloud, improving uptime by 99.9% and reducing costs by 30%.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Read More</a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 border rounded shadow">
+            <h5>Healthcare Data Security</h5>
+            <p>Implemented secure patient record systems compliant with HIPAA regulations, protecting millions of records.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Served Section -->
+  <section id="industries" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Industries We Serve</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Finance</h6><p>Secure banking systems.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Healthcare</h6><p>Patient-first tech.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Retail</h6><p>Digital commerce tools.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Education</h6><p>E-learning platforms.</p></div></div>
+      </div>
+      <div class="row g-4 mt-3">
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Travel</h6><p>Booking & apps.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Manufacturing</h6><p>Smart automation.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Media</h6><p>Streaming platforms.</p></div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Government</h6><p>Secure e-governance.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Team Section -->
+<section id="team" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title text-primary">Our Team</h2>
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Founder -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="images/nagadeepak v.jpg" class="team-photo" alt="Founder">
+          <div class="card-body">
+            <h5 class="card-title">Nagadeepak V</h5>
+            <p class="text-muted">Founder & CEO</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Co-Founder -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="images/nisnatht.jpg" class="team-photo" alt="Co-Founder">
+          <div class="card-body">
+            <h5 class="card-title">Nisanth T</h5>
+            <p class="text-muted">Co-Founder</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Managing Director -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="images/nisanths.jpg" class="team-photo" alt="Managing Director">
+          <div class="card-body">
+            <h5 class="card-title">Nisanth S</h5>
+            <p class="text-muted">Managing Director</p>
+          </div>
+        </div>
+      </div>
+
+          <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm">
+          <img src="images/suresh.jpg" class="team-photo" alt="Managing Director">
+          <div class="card-body">
+            <h5 class="card-title">Suresh Krishnan S</h5>
+            <p class="text-muted">Director</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- FAQ Section -->
+<section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-primary text-center">Frequently Asked Questions</h2>
+    <div class="accordion mt-4" id="faqAccordion">
+      
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            What services does ZSOS IT Solutions provide?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            At <strong>ZSOS IT Solutions</strong>, we provide end-to-end digital services including:
+            <ul>
+              <li>Custom Website Design & Development</li>
+              <li>Mobile App Development (iOS & Android)</li>
+              <li>Cloud Computing & Server Management</li>
+              <li>UI/UX Design & Prototyping</li>
+              <li>Software Development (Enterprise & Startup Solutions)</li>
+              <li>IT Consulting & Business Process Automation</li>
+              <li>Digital Marketing & SEO Optimization</li>
+            </ul>
+            Our goal is to deliver solutions that are <em>scalable, secure, and user-friendly</em>.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            Do you work with startups?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, absolutely! We specialize in helping startups by:
+            <ul>
+              <li>Building <strong>MVPs (Minimum Viable Products)</strong> to quickly test business ideas.</li>
+              <li>Providing <strong>cost-effective solutions</strong> tailored for small teams.</li>
+              <li>Offering <strong>scaling strategies</strong> to grow from prototype to production.</li>
+              <li>Advising on <strong>technology stack</strong> selection for long-term sustainability.</li>
+            </ul>
+            We’ve partnered with several startups from idea stage to becoming full-fledged companies.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            How do I request a quote?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Requesting a quote is simple:
+            <ol>
+              <li>Go to the <strong>Contact Us</strong> section of our website.</li>
+              <li>Fill in the form with your <em>name, email, project details, and budget range</em>.</li>
+              <li>Alternatively, you can email us directly at <a href="mailto:info@zsositsolutions.com">info@zsositsolutions.com</a>.</li>
+              <li>For urgent inquiries, reach us via WhatsApp or phone — details are available on the contact page.</li>
+            </ol>
+            Once submitted, our team will analyze your requirements and send you a detailed proposal within <strong>24-48 hours</strong>.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+            Do you offer ongoing support and maintenance?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we provide <strong>comprehensive post-launch support</strong>. Our services include:
+            <ul>
+              <li>Bug fixes and troubleshooting</li>
+              <li>Security patches and updates</li>
+              <li>Performance monitoring</li>
+              <li>Feature enhancements and upgrades</li>
+            </ul>
+            We offer both <strong>monthly maintenance plans</strong> and <strong>on-demand support</strong> packages to ensure your systems run smoothly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+            What industries do you serve?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We have experience working across multiple industries, including:
+            <ul>
+              <li>Healthcare & Medical</li>
+              <li>E-commerce & Retail</li>
+              <li>Education & E-learning</li>
+              <li>Finance & Fintech</li>
+              <li>Real Estate & Construction</li>
+              <li>Travel & Hospitality</li>
+              <li>Startups & Enterprises</li>
+            </ul>
+            Whatever your industry, we adapt our solutions to your unique needs.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Blog Section -->
+<!-- Blog Section -->
+<section id="blog" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title text-primary">Latest Insights</h2>
+    <div class="row g-4">
+
+      <!-- Blog 1 -->
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="images/cloud.png" class="card-img-top" alt="Cloud Trends">
+          <div class="card-body text-start">
+            <h5 class="card-title">Top 5 Cloud Trends 2025</h5>
+            <p class="card-text">
+              Cloud computing continues to revolutionize the IT industry.  
+              In 2025, businesses are moving towards <strong>hybrid cloud models</strong>,  
+              improved <strong>AI-driven automation</strong>, and <strong>serverless computing</strong>.  
+              Companies adopting these trends will see faster scalability and reduced costs.  
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="images/mobile.png" class="card-img-top" alt="Mobile Apps">
+          <div class="card-body text-start">
+            <h5 class="card-title">The Future of Mobile Apps</h5>
+            <p class="card-text">
+              Mobile apps are becoming more intelligent with the rise of  
+              <strong>5G, AI, and IoT</strong>. In the coming years, mobile-first  
+              development will drive personalized experiences, faster load times,  
+              and seamless integrations with smart devices.  
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="col-md-4">
+        <div class="card shadow h-100">
+          <img src="images/ai.png" class="card-img-top" alt="AI in Business">
+          <div class="card-body text-start">
+            <h5 class="card-title">AI in Business</h5>
+            <p class="card-text">
+              Artificial Intelligence is no longer optional — it’s essential.  
+              From <strong>chatbots</strong> improving customer service, to  
+              <strong>predictive analytics</strong> driving better decision-making,  
+              AI is increasing efficiency across industries such as healthcare,  
+              finance, and retail.  
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Partners Section -->
+<section id="partners" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title text-primary mb-5">Our Partners</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Partner 1 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="images/partner1.jpg" class="img-fluid" alt="Partner 1">
+        </div>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="images/partner2.jpg" class="img-fluid" alt="Partner 2">
+        </div>
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="images/partner3.jpg" class="img-fluid" alt="Partner 3">
+        </div>
+      </div>
+
+      <!-- Partner 4 -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-sm p-3">
+          <img src="images/partner4.jpg" class="img-fluid" alt="Partner 4">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Newsletter Section -->
+  <section id="newsletter" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Stay Updated</h2>
+      <p class="mb-4">Subscribe to our newsletter for the latest updates and offers.</p>
+      <form class="d-flex justify-content-center">
+        <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
+        <button class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+<!-- Careers Section -->
+<section id="careers" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title text-primary">Join Our Team</h2>
+    <p class="mb-5">We’re hiring passionate tech enthusiasts to grow with us.</p>
+    <div class="row g-4">
+      
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow">
+          <h5>Frontend Developer</h5>
+          <p>2+ years experience, strong in React/Bootstrap.</p>
+          <a href="https://forms.gle/abcd1234XYZ" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow">
+          <h5>Backend Engineer</h5>
+          <p>Node.js/Java expertise, database knowledge required.</p>
+          <a href="https://forms.gle/abcd1234XYZ" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        </div>
+      </div>
+      
+      <div class="col-md-4">
+        <div class="p-4 border rounded shadow">
+          <h5>UI/UX Designer</h5>
+          <p>Creative thinker, Adobe XD/Figma experience a must.</p>
+          <a href="https://forms.gle/abcd1234XYZ" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Our Journey</h2>
+      <div class="timeline">
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6 text-md-end">
+            <h5>2023</h5>
+            <p>ZSOS IT Solutions founded with a small team of visionaries.</p>
+          </div>
+          <div class="col-md-6 text-md-start">
+            <span class="badge bg-primary">Start</span>
+          </div>
+        </div>
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6 text-md-end">
+            <h5>2024</h5>
+            <p>Launched first enterprise-level SaaS product with success.</p>
+          </div>
+          <div class="col-md-6 text-md-start">
+            <span class="badge bg-success">Growth</span>
+          </div>
+        </div>
+        <div class="row align-items-center mb-5">
+          <div class="col-md-6 text-md-end">
+            <h5>2025</h5>
+            <p>Expanded to global clients and reached 500+ projects delivered.</p>
+          </div>
+          <div class="col-md-6 text-md-start">
+            <span class="badge bg-warning">Expansion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+<section id="gallery" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="section-title text-primary">Our Gallery</h2>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <img src="images/logo.jpg" class="img-fluid rounded shadow" alt="Project 1">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr2.png" class="img-fluid rounded shadow" alt="Project 2">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr3.jpg" class="img-fluid rounded shadow" alt="Project 3">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr4.jpg" class="img-fluid rounded shadow" alt="Project 4">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr5.png" class="img-fluid rounded shadow" alt="Project 5">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr6.png" class="img-fluid rounded shadow" alt="Project 6">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr7.png" class="img-fluid rounded shadow" alt="Project 7">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="images/pr1.jpg" class="img-fluid rounded shadow" alt="Project 8">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title text-primary">Get in Touch</h2>
+      <p class="mb-5">Have a project in mind? Let’s build something amazing together.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow h-100">
+            <i class="bi bi-geo-alt-fill text-primary display-6 mb-3"></i>
+            <h5>Our Address</h5>
+            <p>Thirunagar Madurai</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow h-100">
+            <i class="bi bi-telephone-fill text-primary display-6 mb-3"></i>
+            <h5>Call Us</h5>
+            <p>+91 6369965602</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded shadow h-100">
+            <i class="bi bi-envelope-fill text-primary display-6 mb-3"></i>
+            <h5>Email Us</h5>
+            <p>zsositsolutions@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+<!-- Contact Form -->
+<!-- Contact Form -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <img src="images/logo.jpg" alt="Logo" style="height:70px;">
+      <h2 class="mt-3 text-primary fw-bold">Contact Us</h2>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow border-0 p-4">
+          <form id="whatsappForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+              </div>
+              <div class="col-12">
+                <textarea id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary btn-lg px-5 animate-btn">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Replace with your WhatsApp number (with country code, no + sign)
+    let phoneNumber = "916369965602"; // Example: 91 for India
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage = `Hello, I am ${name} (%20${email}%20).\nSubject: ${subject}\nMessage: ${message}`;
+
+    let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank"); // Opens WhatsApp in new tab
+  });
+</script>
+
+          
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+<section id="map" class="p-0">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0816398857797!2d78.07145377411052!3d9.885661275248498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00f01a1a3a2a8b%3A0x92d72a345c67cfcb!2s6th%20Stop%2C%20Thirunagar%2C%20Madurai%2C%20Tamil%20Nadu%20625006!5e0!3m2!1sen!2sin!4v1724064585291!5m2!1sen!2sin" 
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="py-5 text-light" style="background: linear-gradient(135deg, #0d47a1, #1976d2);">
+  <div class="container">
+    <div class="row mb-4 text-center text-md-start">
+      
+      <!-- Company Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">ZSOS IT Solutions</h5>
+        <p>Innovating the future, one solution at a time.  
+        We provide IT consulting, AI solutions, cybersecurity, and digital transformation.</p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#about" class="text-light text-decoration-none d-block py-1">About Us</a></li>
+          <li><a href="#services" class="text-light text-decoration-none d-block py-1">Services</a></li>
+          <li><a href="#portfolio" class="text-light text-decoration-none d-block py-1">Portfolio</a></li>
+          <li><a href="#blog" class="text-light text-decoration-none d-block py-1">Blog</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none d-block py-1">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Contact</h5>
+        <p><i class="bi bi-geo-alt-fill me-2"></i> Tamil Nadu, India</p>
+        <p><i class="bi bi-envelope-fill me-2"></i> zsositsolutions@gmail.com</p>
+        <p><i class="bi bi-telephone-fill me-2"></i> +91 6369965602</p>
+      </div>
+      
+      <!-- Newsletter -->
+      <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Stay Updated</h5>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Enter email" required>
+          <button class="btn btn-warning">Subscribe</button>
+        </form>
+        <div class="mt-3">
+          <a href="#" class="text-light fs-4 me-3 social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-4 me-3 social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light fs-4 me-3 social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-light fs-4 social-icon"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-light">
+    <p class="mb-0 text-center">&copy; 2025 ZSOS IT Solutions. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Extra Styling -->
+<style>
+  footer a:hover {
+    color: #ffeb3b !important;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+  .social-icon:hover {
+    color: #ffeb3b !important;
+  }
+</style>
+
+
+  <!-- Floating Buttons -->
+  <a href="#hero" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="width:60px; height:60px; display:flex; justify-content:center; align-items:center;">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <a href="https://wa.me/6369965602" target="_blank" class="btn btn-success position-fixed bottom-0 start-0 m-4 rounded-circle shadow" style="width:60px; height:60px; display:flex; justify-content:center; align-items:center;">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
