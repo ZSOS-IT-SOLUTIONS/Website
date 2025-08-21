@@ -4,35 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZSOS IT Solutions</title>
+  
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  body { scroll-behavior: smooth; }
-  .hero-section {
-    background: linear-gradient(rgba(0, 1, 153, 0.8), rgba(0, 1, 153, 0.8)); 
-    /* Blue gradient background */
-    height: 40vh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-  }
-  .hero-text { 
-    color: white; 
-    text-align: center; 
-  }
-  .section-title { 
-    font-weight: 70; 
-    margin-bottom: 4px; 
-  }
-  .service-card, .pricing-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .service-card:hover, .pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
-  }
-</style>
+  
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Animate.css (CSS animations) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <style>
+    body { 
+      scroll-behavior: smooth; 
+      font-family: 'Poppins', sans-serif;
+    }
 
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(rgba(0, 1, 153, 0.8), rgba(0, 1, 153, 0.8)); 
+      height: 40vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out; /* custom fade effect */
+    }
+
+    .hero-text { 
+      color: white; 
+      text-align: center; 
+      animation: slideInDown 1.5s ease;
+    }
+
+    /* Section Titles */
+    .section-title { 
+      font-weight: 700; 
+      margin-bottom: 20px; 
+      position: relative;
+      animation: bounceIn 1.8s;
+    }
+    .section-title::after {
+      content: '';
+      width: 60px;
+      height: 4px;
+      background: gold;
+      display: block;
+      margin: 10px auto;
+      border-radius: 2px;
+    }
+
+    /* Service & Pricing Cards */
+    .service-card, .pricing-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: zoomIn 1.2s;
+    }
+    .service-card:hover, .pricing-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+    }
+
+    /* Buttons */
+    .btn-animate {
+      transition: all 0.3s ease;
+    }
+    .btn-animate:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Custom Animations */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideInDown {
+      from {transform: translateY(-100px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- Hero Section -->
@@ -67,147 +118,300 @@
 
 
 
-  <!-- About Section -->
-  <section id="about" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title text-primary">About Us</h2>
-      <p class="mb-4">
-        ZSOS IT Solutions is a global technology company delivering innovative digital products, 
-        IT services, and consulting to businesses worldwide.
+<!-- About Section -->
+<section id="about" class="py-5" style="background-color: #ffffff; color: #1a1a2e;">
+  <div class="container text-center">
+    
+    <!-- SEO-friendly heading -->
+    <h2 class="section-title mb-4" style="color: #0022ff; font-weight: 700;">
+      About ZSOS IT Solutions
+    </h2>
+
+    <p class="mb-4" style="font-size: 18px; line-height: 1.8; color: #333;">
+      <strong>ZSOS IT Solutions</strong> is a trusted global technology partner delivering
+      <em>innovative digital products, enterprise IT services, and expert consulting</em> to businesses worldwide.  
+      With a focus on <strong>creativity, performance, and innovation</strong>, we empower startups, enterprises, 
+      and organizations to achieve <strong>digital transformation</strong> and stay ahead in a competitive market.
+    </p>
+
+    <!-- Key Highlights -->
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="p-4 border rounded shadow-lg" style="background-color:#FFD700; color:#1a1a2e;">
+          <h5><i class="fas fa-history"></i> 5+ Years</h5>
+          <p>Proven expertise in IT consulting & services.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border rounded shadow-lg" style="background-color:#FFD700; color:#1a1a2e;">
+          <h5><i class="fas fa-users"></i> 25+ Team Members</h5>
+          <p>Certified professionals with diverse skills.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border rounded shadow-lg" style="background-color:#FFD700; color:#1a1a2e;">
+          <h5><i class="fas fa-handshake"></i> 50+ Clients</h5>
+          <p>Trusted by businesses across industries.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-4 border rounded shadow-lg" style="background-color:#FFD700; color:#1a1a2e;">
+          <h5><i class="fas fa-globe"></i> Global Presence</h5>
+          <p>Delivering IT solutions across 10+ countries.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO-friendly mission/vision -->
+    <div class="mt-5">
+      <h3 style="color:#000000;">Our Mission</h3>
+      <p style="color:#333;">
+        To provide <strong>cutting-edge digital solutions</strong> that enhance business growth, 
+        improve efficiency, and create long-term success.
       </p>
-      <div class="row g-4">
-        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5> Years Experience</h5><p>Trusted expertise in IT services.</p></div></div>
-        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5>10+ Team Members</h5><p>Passionate experts ready to help.</p></div></div>
-        <div class="col-md-4"><div class="p-4 border rounded shadow"><h5>10+ Clients</h5><p>Worldwide network of satisfied customers.</p></div></div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5 bg-white">
-    <div class="container text-center">
-      <h2 class="section-title text-primary">Our Services</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="service-card p-4 border rounded shadow">
-            <h5>Web Development</h5>
-            <p>Responsive, fast, and secure websites built with modern technologies.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card p-4 border rounded shadow">
-            <h5>Cloud Solutions</h5>
-            <p>Reliable cloud architecture, migration, and management services.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card p-4 border rounded shadow">
-            <h5>Cybersecurity</h5>
-            <p>End-to-end protection against evolving digital threats.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quiz Section -->
-<section id="quiz" class="py-5 bg-light text-center">
-  <div class="container">
-    <h2 class="section-title text-primary">Take a Quiz</h2>
-    <p class="mb-4">Select a quiz and test your skills.</p>
-
-    <!-- Buttons to switch -->
-    <div class="mb-4">
-      <button class="btn btn-primary mx-2" onclick="showQuiz('pythonQuiz')">Python Quiz</button>
-      <button class="btn btn-primary mx-2" onclick="showQuiz('javaQuiz')">Java Quiz</button>
-      <button class="btn btn-primary mx-2" onclick="showQuiz('cQuiz')">C Quiz</button>
-      <button class="btn btn-primary mx-2" onclick="showQuiz('cppQuiz')">C++ Quiz</button>
+      <h3 style="color:#000000;">Our Vision</h3>
+      <p style="color:#333;">
+        To be a <em>global leader in IT innovation</em>, empowering businesses with
+        <strong>technology, creativity, and intelligence</strong>.
+      </p>
     </div>
 
-    <!-- Python Quiz -->
-    <form id="pythonQuiz" class="quiz-box d-none">
-      <h4>Python Quiz</h4>
-      <div class="quiz-question">
-        <p>1. Who developed Python?</p>
-        <label><input type="radio" name="q1" value="a"> Guido van Rossum</label><br>
-        <label><input type="radio" name="q1" value="b"> James Gosling</label><br>
-        <label><input type="radio" name="q1" value="c"> Dennis Ritchie</label><br>
-        <label><input type="radio" name="q1" value="d"> Bjarne Stroustrup</label>
-      </div>
-
-      <div class="quiz-question">
-        <p>2. File extension for Python?</p>
-        <label><input type="radio" name="q2" value="a"> .java</label><br>
-        <label><input type="radio" name="q2" value="b"> .c</label><br>
-        <label><input type="radio" name="q2" value="c"> .cpp</label><br>
-        <label><input type="radio" name="q2" value="d"> .py</label>
-      </div>
-
-      <!-- Add 8 more questions same way -->
-
-      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('pythonQuiz')">Submit</button>
-    </form>
-
-    <!-- Java Quiz -->
-    <form id="javaQuiz" class="quiz-box d-none">
-      <h4>Java Quiz</h4>
-      <div class="quiz-question">
-        <p>1. Who developed Java?</p>
-        <label><input type="radio" name="q1" value="a"> Guido van Rossum</label><br>
-        <label><input type="radio" name="q1" value="b"> James Gosling</label><br>
-        <label><input type="radio" name="q1" value="c"> Dennis Ritchie</label>
-      </div>
-      <!-- Add more questions here -->
-      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('javaQuiz')">Submit</button>
-    </form>
-
-    <!-- C Quiz -->
-    <form id="cQuiz" class="quiz-box d-none">
-      <h4>C Quiz</h4>
-      <div class="quiz-question">
-        <p>1. Who developed C?</p>
-        <label><input type="radio" name="q1" value="a"> Dennis Ritchie</label><br>
-        <label><input type="radio" name="q1" value="b"> James Gosling</label>
-      </div>
-      <!-- Add more questions -->
-      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('cQuiz')">Submit</button>
-    </form>
-
-    <!-- C++ Quiz -->
-    <form id="cppQuiz" class="quiz-box d-none">
-      <h4>C++ Quiz</h4>
-      <div class="quiz-question">
-        <p>1. Who developed C++?</p>
-        <label><input type="radio" name="q1" value="a"> Bjarne Stroustrup</label><br>
-        <label><input type="radio" name="q1" value="b"> Dennis Ritchie</label>
-      </div>
-      <!-- Add more questions -->
-      <button type="button" class="btn btn-success mt-3" onclick="checkQuiz('cppQuiz')">Submit</button>
-    </form>
-
-    <!-- Result Box -->
-    <div id="resultBox" class="mt-4 d-none">
-      <h4 id="resultText"></h4>
-    </div>
   </div>
 </section>
 
 
-  <!-- Why Choose Us Section -->
-  <section id="why-us" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title text-primary">Why Choose Us?</h2>
-      <div class="row g-4">
-        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>24/7 Support</h6><p>Always here when you need us.</p></div></div>
-        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Innovation</h6><p>Cutting-edge solutions tailored to you.</p></div></div>
-        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Scalability</h6><p>Solutions that grow with your business.</p></div></div>
-        <div class="col-md-3"><div class="p-4 border rounded shadow"><h6>Security</h6><p>Top-notch cybersecurity at every layer.</p></div></div>
+
+ <!-- Services Section -->
+<section id="services" class="py-5" style="background: linear-gradient(135deg, #ffffff, #FFF8DC);">
+  <div class="container text-center">
+    <h2 class="section-title text-dark mb-5 fw-bold">Our Services</h2>
+    <div class="row g-4">
+      
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">Web Development</h5>
+          <p>Responsive, fast, and secure websites built with modern technologies.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
       </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">Cloud Solutions</h5>
+          <p>Reliable cloud architecture, migration, and management services.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">Cybersecurity</h5>
+          <p>End-to-end protection against evolving digital threats.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">AI & Automation</h5>
+          <p>Smart AI-driven solutions to automate workflows and increase efficiency.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">Mobile App Development</h5>
+          <p>Custom Android & iOS apps with seamless UI/UX and performance.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="col-md-4">
+        <div class="service-card p-4 border rounded shadow-lg bg-white h-100">
+          <h5 class="fw-bold text-primary">IT Consulting</h5>
+          <p>Expert guidance to optimize IT infrastructure and digital strategy.</p>
+          <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Internship Section -->
+<section id="internship" class="py-5 bg-white text-center">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <h2 class="mb-4 text-primary fw-bold">
+      <i class="bi bi-mortarboard-fill"></i> Internship Opportunities
+    </h2>
+    <p class="mb-5 text-muted">Kickstart your career with real-world projects and mentorship 🚀</p>
+
+    <div class="row g-4">
+
+      <!-- Internship 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Remote</span>
+            <h4 class="card-title"><i class="bi bi-code-slash"></i> Web Development Internship</h4>
+            <p class="card-text text-muted">Learn HTML, CSS, JavaScript, and Bootstrap while building real-world projects.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Onsite</span>
+            <h4 class="card-title"><i class="bi bi-cpu-fill"></i> AI & Machine Learning Internship</h4>
+            <p class="card-text text-muted">Work on AI models, data analysis, and machine learning applications.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-info text-dark mb-2">Paid</span>
+            <h4 class="card-title"><i class="bi bi-shield-lock-fill"></i> Cybersecurity Internship</h4>
+            <p class="card-text text-muted">Gain hands-on experience in ethical hacking, SIEM tools, and security analysis.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship 4 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">Remote</span>
+            <h4 class="card-title"><i class="bi bi-phone-fill"></i> Mobile App Development</h4>
+            <p class="card-text text-muted">Build Android/iOS apps using Flutter and React Native.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship 5 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Hybrid</span>
+            <h4 class="card-title"><i class="bi bi-palette-fill"></i> UI/UX Design Internship</h4>
+            <p class="card-text text-muted">Work with Figma, Adobe XD, and modern design frameworks.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Internship 6 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg h-100 border-0 internship-card">
+          <div class="card-body">
+            <span class="badge bg-dark mb-2">Onsite</span>
+            <h4 class="card-title"><i class="bi bi-graph-up-arrow"></i> Digital Marketing Internship</h4>
+            <p class="card-text text-muted">SEO, content marketing, and social media campaigns.</p>
+            <a href="https://forms.gle/your-google-form-link" target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  .internship-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .internship-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+</style>
+
+
+
+  <!-- Why Choose Us Section -->
+<section id="why-us" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title text-dark mb-5">Why Choose Us?</h2>
+    <div class="row g-4">
+
+      <!-- 24/7 Support -->
+      <div class="col-md-3">
+        <div class="p-4 rounded shadow text-white h-100 card-box" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+          <h6>24/7 Support</h6>
+          <p>Always here when you need us.</p>
+        </div>
+      </div>
+
+      <!-- Innovation -->
+      <div class="col-md-3">
+        <div class="p-4 rounded shadow text-white h-100 card-box" style="background: linear-gradient(135deg, #ff512f, #dd2476);">
+          <h6>Innovation</h6>
+          <p>Cutting-edge solutions tailored to you.</p>
+        </div>
+      </div>
+
+      <!-- Scalability -->
+      <div class="col-md-3">
+        <div class="p-4 rounded shadow text-white h-100 card-box" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+          <h6>Scalability</h6>
+          <p>Solutions that grow with your business.</p>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="col-md-3">
+        <div class="p-4 rounded shadow text-white h-100 card-box" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">
+          <h6>Security</h6>
+          <p>Top-notch cybersecurity at every layer.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  #why-us .card-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #why-us .card-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+</style>
+
   <!-- Technologies Section -->
   <section id="technologies" class="py-5 bg-white">
     <div class="container text-center">
@@ -228,103 +432,277 @@
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title text-primary">Our Portfolio</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="p-4 border rounded shadow service-card">
-            <img src="https://picsum.photos/400/250?1" class="img-fluid rounded mb-3" alt="project">
-            <h5>Corporate Website</h5>
-            <p>Custom web platforms for enterprise-level clients.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-4 border rounded shadow service-card">
-            <img src="https://picsum.photos/400/250?2" class="img-fluid rounded mb-3" alt="project">
-            <h5>E-commerce Solutions</h5>
-            <p>Seamless online stores with secure payment gateways.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-4 border rounded shadow service-card">
-            <img src="https://picsum.photos/400/250?3" class="img-fluid rounded mb-3" alt="project">
-            <h5>Mobile Applications</h5>
-            <p>iOS & Android apps built with user experience in mind.</p>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="portfolio" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title text-dark mb-5">Our Portfolio</h2>
+    <div class="row g-4">
 
-  <!-- Case Studies Section -->
-  <section id="case-studies" class="py-5 bg-white">
-    <div class="container">
-      <h2 class="section-title text-primary text-center">Case Studies</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-4 border rounded shadow">
-            <h5>Retail Chain Transformation</h5>
-            <p>We helped a global retail brand migrate to cloud, improving uptime by 99.9% and reducing costs by 30%.</p>
-            <a href="#" class="btn btn-outline-success btn-sm">Read More</a>
-          </div>
+      <!-- Portfolio Item 1 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow service-card text-white h-100" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+          <img src="https://picsum.photos/400/250?1" class="img-fluid rounded mb-3 shadow-lg" alt="project">
+          <h5>Corporate Website</h5>
+          <p>Custom web platforms for enterprise-level clients.</p>
+          <a href="#" class="btn btn-light btn-sm">View Project</a>
         </div>
-        <div class="col-md-6">
-          <div class="p-4 border rounded shadow">
-            <h5>Healthcare Data Security</h5>
-            <p>Implemented secure patient record systems compliant with HIPAA regulations, protecting millions of records.</p>
-            <a href="#" class="btn btn-outline-success btn-sm">Read More</a>
+      </div>
+
+      <!-- Portfolio Item 2 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow service-card text-white h-100" style="background: linear-gradient(135deg, #ff512f, #dd2476);">
+          <img src="https://picsum.photos/400/250?2" class="img-fluid rounded mb-3 shadow-lg" alt="project">
+          <h5>E-commerce Solutions</h5>
+          <p>Seamless online stores with secure payment gateways.</p>
+          <a href="#" class="btn btn-light btn-sm">View Project</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Item 3 -->
+      <div class="col-md-4">
+        <div class="p-4 rounded shadow service-card text-white h-100" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+          <img src="https://picsum.photos/400/250?3" class="img-fluid rounded mb-3 shadow-lg" alt="project">
+          <h5>Mobile Applications</h5>
+          <p>iOS & Android apps built with user experience in mind.</p>
+          <a href="#" class="btn btn-light btn-sm">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  #portfolio .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #portfolio .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  }
+  #portfolio img {
+    transition: transform 0.4s ease;
+  }
+  #portfolio .service-card:hover img {
+    transform: scale(1.05);
+  }
+</style>
+
+<!-- Case Studies Section -->
+<section id="case-studies" class="py-5 bg-white">
+  <div class="container">
+    <!-- Heading -->
+    <h2 class="section-title text-primary text-center mb-4">
+      <i class="bi bi-briefcase-fill"></i> Case Studies
+    </h2>
+    <p class="text-muted text-center mb-5">Real success stories showcasing our expertise in different industries 🚀</p>
+
+    <div class="row g-4">
+
+      <!-- Case Study 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 h-100 case-card">
+          <div class="card-body">
+            <span class="badge bg-primary mb-2">Retail</span>
+            <h5 class="card-title text-dark"><i class="bi bi-shop"></i> Retail Chain Transformation</h5>
+            <p class="card-text text-muted">Migrated legacy retail systems to the cloud, improving uptime by 99.9% and cutting costs by 30%.</p>
+            <ul class="small text-muted text-start">
+              <li>☁ 150+ apps migrated to cloud.</li>
+              <li>⚡ Faster checkout experiences.</li>
+              <li>📊 Real-time analytics dashboards.</li>
+              <li>💰 $2M annual IT savings.</li>
+            </ul>
+            <a href="#" class="btn btn-outline-primary btn-sm mt-2"><i class="bi bi-file-earmark-text"></i> Read More</a>
           </div>
         </div>
       </div>
+
+      <!-- Case Study 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 h-100 case-card">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Healthcare</span>
+            <h5 class="card-title text-dark"><i class="bi bi-heart-pulse"></i> Healthcare Data Security</h5>
+            <p class="card-text text-muted">Built a HIPAA-compliant patient record system securing millions of healthcare records.</p>
+            <ul class="small text-muted text-start">
+              <li>🔒 5M+ patient records encrypted.</li>
+              <li>🔑 Multi-factor authentication.</li>
+              <li>📋 Automated compliance monitoring.</li>
+              <li>📉 85% reduced data breach risks.</li>
+            </ul>
+            <a href="#" class="btn btn-outline-success btn-sm mt-2"><i class="bi bi-shield-lock"></i> View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 h-100 case-card">
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Finance</span>
+            <h5 class="card-title text-dark"><i class="bi bi-currency-exchange"></i> FinTech App Modernization</h5>
+            <p class="card-text text-muted">Revamped a FinTech mobile app, improving transactions speed and scalability.</p>
+            <ul class="small text-muted text-start">
+              <li>📱 New mobile-first architecture.</li>
+              <li>⚡ 40% faster transaction processing.</li>
+              <li>🔐 PCI DSS certified security.</li>
+              <li>🌍 Supporting 1M+ active users.</li>
+            </ul>
+            <a href="#" class="btn btn-outline-warning btn-sm mt-2"><i class="bi bi-phone"></i> Explore More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case Study 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card shadow-lg border-0 h-100 case-card">
+          <div class="card-body">
+            <span class="badge bg-danger mb-2">Education</span>
+            <h5 class="card-title text-dark"><i class="bi bi-mortarboard-fill"></i> E-Learning Platform</h5>
+            <p class="card-text text-muted">Developed a scalable online learning platform with interactive video sessions.</p>
+            <ul class="small text-muted text-start">
+              <li>🎥 1,000+ live sessions monthly.</li>
+              <li>📊 AI-based progress tracking.</li>
+              <li>💡 Enhanced student engagement.</li>
+              <li>🌍 Used across 15 countries.</li>
+            </ul>
+            <a href="#" class="btn btn-outline-danger btn-sm mt-2"><i class="bi bi-laptop"></i> Learn More</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Hover Animation -->
+<style>
+  .case-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+
 
   <!-- Industries Served Section -->
-  <section id="industries" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title text-primary">Industries We Serve</h2>
-      <div class="row g-4">
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Finance</h6><p>Secure banking systems.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Healthcare</h6><p>Patient-first tech.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Retail</h6><p>Digital commerce tools.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Education</h6><p>E-learning platforms.</p></div></div>
+<section id="industries" class="py-5" style="background: #ffffff;">
+  <div class="container text-center text-dark">
+    <h2 class="section-title mb-5" style="color:#1e1e1e;">Industries We Serve</h2>
+    <div class="row g-4">
+
+      <!-- Finance -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #1e3c72, #2a5298);">
+          <h6>💰 Finance</h6>
+          <p>Secure banking systems.</p>
+        </div>
       </div>
-      <div class="row g-4 mt-3">
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Travel</h6><p>Booking & apps.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Manufacturing</h6><p>Smart automation.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Media</h6><p>Streaming platforms.</p></div></div>
-        <div class="col-6 col-md-3"><div class="p-4 border rounded shadow"><h6>Government</h6><p>Secure e-governance.</p></div></div>
+
+      <!-- Healthcare -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #ff512f, #dd2476);">
+          <h6>🩺 Healthcare</h6>
+          <p>Patient-first tech.</p>
+        </div>
+      </div>
+
+      <!-- Retail -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #11998e, #38ef7d);">
+          <h6>🛍️ Retail</h6>
+          <p>Digital commerce tools.</p>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">
+          <h6>📚 Education</h6>
+          <p>E-learning platforms.</p>
+        </div>
       </div>
     </div>
-  </section>
+
+    <!-- Second Row -->
+    <div class="row g-4 mt-3">
+
+      <!-- Travel -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #f7971e, #ffd200);">
+          <h6>✈️ Travel</h6>
+          <p>Booking & apps.</p>
+        </div>
+      </div>
+
+      <!-- Manufacturing -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">
+          <h6>🏭 Manufacturing</h6>
+          <p>Smart automation.</p>
+        </div>
+      </div>
+
+      <!-- Media -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #ff6a00, #ee0979);">
+          <h6>🎬 Media</h6>
+          <p>Streaming platforms.</p>
+        </div>
+      </div>
+
+      <!-- Government -->
+      <div class="col-6 col-md-3">
+        <div class="p-4 rounded-4 shadow-lg industry-card text-white" style="background: linear-gradient(135deg, #232526, #414345);">
+          <h6>🏛️ Government</h6>
+          <p>Secure e-governance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Extra Styling -->
+<style>
+  #industries .industry-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  #industries .industry-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  }
+</style>
 
 <!-- Team Section -->
-<section id="team" class="py-5 bg-white">
+<section id="team" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="section-title text-primary">Our Team</h2>
+    <h2 class="section-title text-primary fw-bold mb-5 animate-title">👥 Our Team</h2>
     <div class="row g-4 justify-content-center">
-      
+
       <!-- Founder -->
       <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm">
-          <img src="images/nagadeepak v.jpg" class="team-photo" alt="Founder">
+        <div class="card border-0 shadow-lg team-card animate-card">
+          <img src="images/nagadeepak v.jpg" 
+               class="team-photo rounded-circle mx-auto mt-4 enlarge-img" 
+               alt="Founder">
           <div class="card-body">
-            <h5 class="card-title">Nagadeepak V</h5>
+            <h5 class="card-title fw-bold">Nagadeepak V</h5>
             <p class="text-muted">Founder & CEO</p>
           </div>
         </div>
       </div>
-      
+
       <!-- Co-Founder -->
       <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm">
-          <img src="images/nisnatht.jpg" class="team-photo" alt="Co-Founder">
+        <div class="card border-0 shadow-lg team-card animate-card">
+          <img src="images/nisnatht.jpg" 
+               class="team-photo rounded-circle mx-auto mt-4 enlarge-img" 
+               alt="Co-Founder">
           <div class="card-body">
-            <h5 class="card-title">Nisanth T</h5>
+            <h5 class="card-title fw-bold">Nisanth T</h5>
             <p class="text-muted">Co-Founder</p>
           </div>
         </div>
@@ -332,20 +710,25 @@
 
       <!-- Managing Director -->
       <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm">
-          <img src="images/nisanths.jpg" class="team-photo" alt="Managing Director">
+        <div class="card border-0 shadow-lg team-card animate-card">
+          <img src="images/nisanths.jpg" 
+               class="team-photo rounded-circle mx-auto mt-4 enlarge-img" 
+               alt="Managing Director">
           <div class="card-body">
-            <h5 class="card-title">Nisanth S</h5>
+            <h5 class="card-title fw-bold">Nisanth S</h5>
             <p class="text-muted">Managing Director</p>
           </div>
         </div>
       </div>
 
-          <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm">
-          <img src="images/suresh.jpg" class="team-photo" alt="Managing Director">
+      <!-- Director -->
+      <div class="col-6 col-md-3">
+        <div class="card border-0 shadow-lg team-card animate-card">
+          <img src="images/suresh.jpg" 
+               class="team-photo rounded-circle mx-auto mt-4 enlarge-img" 
+               alt="Director">
           <div class="card-body">
-            <h5 class="card-title">Suresh Krishnan S</h5>
+            <h5 class="card-title fw-bold">Suresh Krishnan S</h5>
             <p class="text-muted">Director</p>
           </div>
         </div>
@@ -355,147 +738,108 @@
   </div>
 </section>
 
-
-
-  <!-- FAQ Section -->
-<section id="faq" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="section-title text-primary text-center">Frequently Asked Questions</h2>
-    <div class="accordion mt-4" id="faqAccordion">
-      
-      <!-- FAQ 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
-            What services does ZSOS IT Solutions provide?
-          </button>
-        </h2>
-        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            At <strong>ZSOS IT Solutions</strong>, we provide end-to-end digital services including:
-            <ul>
-              <li>Custom Website Design & Development</li>
-              <li>Mobile App Development (iOS & Android)</li>
-              <li>Cloud Computing & Server Management</li>
-              <li>UI/UX Design & Prototyping</li>
-              <li>Software Development (Enterprise & Startup Solutions)</li>
-              <li>IT Consulting & Business Process Automation</li>
-              <li>Digital Marketing & SEO Optimization</li>
-            </ul>
-            Our goal is to deliver solutions that are <em>scalable, secure, and user-friendly</em>.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
-            Do you work with startups?
-          </button>
-        </h2>
-        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, absolutely! We specialize in helping startups by:
-            <ul>
-              <li>Building <strong>MVPs (Minimum Viable Products)</strong> to quickly test business ideas.</li>
-              <li>Providing <strong>cost-effective solutions</strong> tailored for small teams.</li>
-              <li>Offering <strong>scaling strategies</strong> to grow from prototype to production.</li>
-              <li>Advising on <strong>technology stack</strong> selection for long-term sustainability.</li>
-            </ul>
-            We’ve partnered with several startups from idea stage to becoming full-fledged companies.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq3">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
-            How do I request a quote?
-          </button>
-        </h2>
-        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Requesting a quote is simple:
-            <ol>
-              <li>Go to the <strong>Contact Us</strong> section of our website.</li>
-              <li>Fill in the form with your <em>name, email, project details, and budget range</em>.</li>
-              <li>Alternatively, you can email us directly at <a href="mailto:info@zsositsolutions.com">info@zsositsolutions.com</a>.</li>
-              <li>For urgent inquiries, reach us via WhatsApp or phone — details are available on the contact page.</li>
-            </ol>
-            Once submitted, our team will analyze your requirements and send you a detailed proposal within <strong>24-48 hours</strong>.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq4">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
-            Do you offer ongoing support and maintenance?
-          </button>
-        </h2>
-        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, we provide <strong>comprehensive post-launch support</strong>. Our services include:
-            <ul>
-              <li>Bug fixes and troubleshooting</li>
-              <li>Security patches and updates</li>
-              <li>Performance monitoring</li>
-              <li>Feature enhancements and upgrades</li>
-            </ul>
-            We offer both <strong>monthly maintenance plans</strong> and <strong>on-demand support</strong> packages to ensure your systems run smoothly.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faq5">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
-            What industries do you serve?
-          </button>
-        </h2>
-        <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We have experience working across multiple industries, including:
-            <ul>
-              <li>Healthcare & Medical</li>
-              <li>E-commerce & Retail</li>
-              <li>Education & E-learning</li>
-              <li>Finance & Fintech</li>
-              <li>Real Estate & Construction</li>
-              <li>Travel & Hospitality</li>
-              <li>Startups & Enterprises</li>
-            </ul>
-            Whatever your industry, we adapt our solutions to your unique needs.
-          </div>
-        </div>
-      </div>
-
+<!-- Image Modal (Bootstrap) -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" src="" class="img-fluid zoom-in" alt="Enlarged Image">
     </div>
   </div>
-</section>
+</div>
 
-  <!-- Blog Section -->
+<!-- Team Styling & Animations -->
+<style>
+  /* Title Animation */
+  .animate-title {
+    animation: fadeInDown 1s ease-in-out;
+  }
+
+  /* Team Card */
+  .team-card {
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+    background: #fff;
+  }
+  .team-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  /* Team Photo */
+  .team-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border: 5px solid #1976d2;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  .team-card:hover .team-photo {
+    border-color: #ff9800;
+  }
+
+  /* Card Animation */
+  .animate-card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease forwards;
+  }
+  .animate-card:nth-child(1) { animation-delay: 0.2s; }
+  .animate-card:nth-child(2) { animation-delay: 0.4s; }
+  .animate-card:nth-child(3) { animation-delay: 0.6s; }
+  .animate-card:nth-child(4) { animation-delay: 0.8s; }
+
+  /* Keyframes */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Zoom Animation for Modal Image */
+  .zoom-in {
+    animation: zoomIn 0.5s ease;
+  }
+  @keyframes zoomIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+
+<!-- Script for Modal Image -->
+<script>
+  document.querySelectorAll('.enlarge-img').forEach(img => {
+    img.addEventListener('click', function () {
+      document.getElementById('modalImage').src = this.src;
+      new bootstrap.Modal(document.getElementById('imageModal')).show();
+    });
+  });
+</script>
+
+
+
+
+ 
 <!-- Blog Section -->
-<section id="blog" class="py-5 bg-white">
+<section id="blog" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="section-title text-primary">Latest Insights</h2>
+    <h2 class="section-title text-primary fw-bold mb-5 animate-title">✨ Latest Insights</h2>
     <div class="row g-4">
 
       <!-- Blog 1 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
-          <img src="images/cloud.png" class="card-img-top" alt="Cloud Trends">
+        <div class="card shadow-lg h-100 border-0 blog-card animate-card">
+          <img src="images/cloud.png" class="card-img-top rounded-top" alt="Cloud Trends">
           <div class="card-body text-start">
-            <h5 class="card-title">Top 5 Cloud Trends 2025</h5>
+            <h5 class="card-title fw-bold">Top 5 Cloud Trends 2025</h5>
             <p class="card-text">
-              Cloud computing continues to revolutionize the IT industry.  
-              In 2025, businesses are moving towards <strong>hybrid cloud models</strong>,  
-              improved <strong>AI-driven automation</strong>, and <strong>serverless computing</strong>.  
-              Companies adopting these trends will see faster scalability and reduced costs.  
+              Cloud computing continues to revolutionize IT. In 2025, expect  
+              <strong>hybrid cloud models</strong>, <strong>AI-driven automation</strong>,  
+              and <strong>serverless computing</strong> for faster scalability & reduced costs.  
             </p>
           </div>
         </div>
@@ -503,15 +847,14 @@
 
       <!-- Blog 2 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
-          <img src="images/mobile.png" class="card-img-top" alt="Mobile Apps">
+        <div class="card shadow-lg h-100 border-0 blog-card animate-card">
+          <img src="images/mobile.png" class="card-img-top rounded-top" alt="Mobile Apps">
           <div class="card-body text-start">
-            <h5 class="card-title">The Future of Mobile Apps</h5>
+            <h5 class="card-title fw-bold">The Future of Mobile Apps</h5>
             <p class="card-text">
-              Mobile apps are becoming more intelligent with the rise of  
-              <strong>5G, AI, and IoT</strong>. In the coming years, mobile-first  
-              development will drive personalized experiences, faster load times,  
-              and seamless integrations with smart devices.  
+              With <strong>5G, AI, and IoT</strong>, mobile apps are evolving.  
+              Expect faster load times, smarter personalization, and  
+              seamless integration with connected devices.  
             </p>
           </div>
         </div>
@@ -519,16 +862,14 @@
 
       <!-- Blog 3 -->
       <div class="col-md-4">
-        <div class="card shadow h-100">
-          <img src="images/ai.png" class="card-img-top" alt="AI in Business">
+        <div class="card shadow-lg h-100 border-0 blog-card animate-card">
+          <img src="images/ai.png" class="card-img-top rounded-top" alt="AI in Business">
           <div class="card-body text-start">
-            <h5 class="card-title">AI in Business</h5>
+            <h5 class="card-title fw-bold">AI in Business</h5>
             <p class="card-text">
-              Artificial Intelligence is no longer optional — it’s essential.  
-              From <strong>chatbots</strong> improving customer service, to  
-              <strong>predictive analytics</strong> driving better decision-making,  
-              AI is increasing efficiency across industries such as healthcare,  
-              finance, and retail.  
+              <strong>AI</strong> is now essential. From smart chatbots to  
+              <strong>predictive analytics</strong>, AI improves efficiency in  
+              industries like healthcare, retail, and finance.  
             </p>
           </div>
         </div>
@@ -537,6 +878,52 @@
     </div>
   </div>
 </section>
+
+<!-- Blog Animations & Styling -->
+<style>
+  /* Title Animation */
+  .animate-title {
+    animation: fadeInDown 1s ease-in-out;
+  }
+
+  /* Card Hover Effects */
+  .blog-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+  .blog-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+  }
+  .blog-card img {
+    transition: transform 0.5s ease;
+  }
+  .blog-card:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Fade-in Animation for Cards */
+  .animate-card {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease forwards;
+  }
+  .animate-card:nth-child(1) { animation-delay: 0.2s; }
+  .animate-card:nth-child(2) { animation-delay: 0.4s; }
+  .animate-card:nth-child(3) { animation-delay: 0.6s; }
+
+  /* Keyframes */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 
 <!-- Our Partners Section -->
 <section id="partners" class="py-5 bg-light">
@@ -590,39 +977,77 @@
     </div>
   </section>
 <!-- Careers Section -->
-<section id="careers" class="py-5 bg-white">
+<section id="careers" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="section-title text-primary">Join Our Team</h2>
-    <p class="mb-5">We’re hiring passionate tech enthusiasts to grow with us.</p>
+    
+    <!-- Section Title -->
+    <h2 class="section-title mb-4 text-primary fw-bold">
+      <i class="bi bi-briefcase-fill"></i> Join Our Team
+    </h2>
+    <p class="mb-5 text-muted">We’re hiring passionate tech enthusiasts to grow with us. 🚀</p>
+    
     <div class="row g-4">
       
+      <!-- Frontend Developer -->
       <div class="col-md-4">
-        <div class="p-4 border rounded shadow">
-          <h5>Frontend Developer</h5>
-          <p>2+ years experience, strong in React/Bootstrap.</p>
-          <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        <div class="card h-100 shadow border-0 career-card">
+          <div class="card-body">
+            <span class="badge bg-warning text-dark mb-2">Full-time</span>
+            <h5 class="card-title"><i class="bi bi-code-slash"></i> Frontend Developer</h5>
+            <p class="card-text text-muted">2+ years experience, strong in React/Bootstrap.</p>
+            <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" 
+               target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
         </div>
       </div>
-      
+
+      <!-- Backend Engineer -->
       <div class="col-md-4">
-        <div class="p-4 border rounded shadow">
-          <h5>Backend Engineer</h5>
-          <p>Node.js/Java expertise, database knowledge required.</p>
-          <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        <div class="card h-100 shadow border-0 career-card">
+          <div class="card-body">
+            <span class="badge bg-success mb-2">Hiring</span>
+            <h5 class="card-title"><i class="bi bi-server"></i> Backend Engineer</h5>
+            <p class="card-text text-muted">Node.js/Java expertise, database knowledge required.</p>
+            <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" 
+               target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
         </div>
       </div>
-      
+
+      <!-- UI/UX Designer -->
       <div class="col-md-4">
-        <div class="p-4 border rounded shadow">
-          <h5>UI/UX Designer</h5>
-          <p>Creative thinker, Adobe XD/Figma experience a must.</p>
-          <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" target="_blank" class="btn btn-outline-primary">Apply Now</a>
+        <div class="card h-100 shadow border-0 career-card">
+          <div class="card-body">
+            <span class="badge bg-info text-dark mb-2">Internship</span>
+            <h5 class="card-title"><i class="bi bi-palette-fill"></i> UI/UX Designer</h5>
+            <p class="card-text text-muted">Creative thinker, Adobe XD/Figma experience a must.</p>
+            <a href="https://docs.google.com/forms/d/1t7sUIeM1Vkrrs3iK090b42IfxH60npVBCermre4nAm0/edit" 
+               target="_blank" class="btn btn-primary w-100">
+              Apply Now
+            </a>
+          </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 </section>
+
+<!-- Extra Styling -->
+<style>
+  .career-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .career-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+</style>
+
 
 
   <!-- Roadmap Section -->
@@ -661,38 +1086,217 @@
     </div>
   </section>
 
-  <!-- Gallery Section -->
+<!-- Gallery Section -->
 <section id="gallery" class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="section-title text-primary">Our Gallery</h2>
+    <h2 class="section-title text-primary mb-4">
+      <i class="bi bi-images"></i> Our Gallery
+    </h2>
+    <p class="text-muted mb-5">A glimpse of our work and achievements 📸</p>
+
     <div class="row g-3">
+      <!-- Gallery Images -->
       <div class="col-6 col-md-3">
-        <img src="images/logo.jpg" class="img-fluid rounded shadow" alt="Project 1">
+        <img src="images/logo.jpg" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="0" alt="Project 1">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr2.png" class="img-fluid rounded shadow" alt="Project 2">
+        <img src="images/pr2.png" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="1" alt="Project 2">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr3.jpg" class="img-fluid rounded shadow" alt="Project 3">
+        <img src="images/pr3.jpg" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="2" alt="Project 3">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr4.jpg" class="img-fluid rounded shadow" alt="Project 4">
+        <img src="images/pr4.jpg" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="3" alt="Project 4">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr5.png" class="img-fluid rounded shadow" alt="Project 5">
+        <img src="images/pr5.png" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="4" alt="Project 5">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr6.png" class="img-fluid rounded shadow" alt="Project 6">
+        <img src="images/pr6.png" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="5" alt="Project 6">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr7.png" class="img-fluid rounded shadow" alt="Project 7">
+        <img src="images/pr7.png" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="6" alt="Project 7">
       </div>
       <div class="col-6 col-md-3">
-        <img src="images/pr1.jpg" class="img-fluid rounded shadow" alt="Project 8">
+        <img src="images/pr1.jpg" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="7" alt="Project 8">
       </div>
     </div>
   </div>
 </section>
+
+<!-- Bootstrap Modal with Carousel -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/logo.jpg" class="d-block w-100" alt="Project 1">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr2.png" class="d-block w-100" alt="Project 2">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr3.jpg" class="d-block w-100" alt="Project 3">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr4.jpg" class="d-block w-100" alt="Project 4">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr5.png" class="d-block w-100" alt="Project 5">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr6.png" class="d-block w-100" alt="Project 6">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr7.png" class="d-block w-100" alt="Project 7">
+            </div>
+            <div class="carousel-item">
+              <img src="images/pr1.jpg" class="d-block w-100" alt="Project 8">
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hover Zoom Effect -->
+<style>
+  .gallery-img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .gallery-img:hover {
+    transform: scale(1.08);
+  }
+</style>
+
+
+<!-- FAQ Section -->
+<section id="faq" class="py-5" style="background: linear-gradient(135deg, #fff9e6, #ffe4b5);">
+  <div class="container">
+    <h2 class="section-title text-center mb-5 fw-bold text-dark">
+      <i class="bi bi-question-circle-fill text-primary"></i> Frequently Asked Questions
+    </h2>
+
+    <div class="accordion shadow-lg rounded-3 overflow-hidden" id="faqAccordion">
+
+      <!-- FAQ Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            What services does ZSOS IT Solutions provide?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            At <strong>ZSOS IT Solutions</strong>, we provide end-to-end digital services including:
+            <ul class="mt-2">
+              <li>🌐 Custom Website Design & Development</li>
+              <li>📱 Mobile App Development (iOS & Android)</li>
+              <li>☁️ Cloud Computing & Server Management</li>
+              <li>🎨 UI/UX Design & Prototyping</li>
+              <li>💻 Software Development</li>
+              <li>🛠 IT Consulting & Automation</li>
+              <li>🚀 Digital Marketing & SEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            Do you work with startups?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            ✅ Yes! We specialize in helping startups by:
+            <ul class="mt-2">
+              <li>🚀 Building MVPs to test business ideas</li>
+              <li>💰 Providing cost-effective solutions</li>
+              <li>📈 Scaling from prototype to production</li>
+              <li>🧩 Advising on the right tech stack</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            How do I request a quote?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            📝 Requesting a quote is simple:
+            <ol class="mt-2">
+              <li>Go to the <strong>Contact Us</strong> section.</li>
+              <li>Fill in your name, email, and project details.</li>
+              <li>Email us at <a href="mailto:info@zsositsolutions.com" class="text-decoration-none fw-bold">info@zsositsolutions.com</a></li>
+              <li>📞 For urgent needs, call or WhatsApp us.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more FAQ items (same format) -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Premium FAQ Styling -->
+<style>
+  #faq .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  }
+
+  #faq .accordion-button {
+    font-weight: 600;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+  }
+
+  #faq .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  #faq .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #ffcc70, #ff9472);
+    color: #000;
+  }
+
+  #faq .accordion-body {
+    background: #fff;
+    padding: 20px;
+    border-left: 4px solid #ff9472;
+    border-radius: 0 0 12px 12px;
+  }
+
+  #faq ul li, #faq ol li {
+    margin-bottom: 6px;
+  }
+</style>
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-5 bg-light">
@@ -724,33 +1328,33 @@
       </div>
 
 <!-- Contact Form -->
-<!-- Contact Form -->
 <section id="contact" class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-4">
+    <div class="text-center mb-5">
       <img src="images/logo.jpg" alt="Logo" style="height:70px;">
-      <h2 class="mt-3 text-primary fw-bold">Contact Us</h2>
+      <h2 class="mt-3 text-primary fw-bold">Get in Touch</h2>
+      <p class="text-muted">We’d love to hear from you. Fill out the form below and we’ll get back shortly!</p>
     </div>
-    
+
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <div class="card shadow border-0 p-4">
+        <div class="card shadow-lg border-0 rounded-4 p-4">
           <form id="whatsappForm">
             <div class="row g-3">
               <div class="col-md-6">
-                <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                <input type="text" id="name" class="form-control form-control-lg" placeholder="Your Name" required>
               </div>
               <div class="col-md-6">
-                <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                <input type="email" id="email" class="form-control form-control-lg" placeholder="Your Email" required>
               </div>
               <div class="col-12">
-                <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                <input type="text" id="subject" class="form-control form-control-lg" placeholder="Subject" required>
               </div>
               <div class="col-12">
-                <textarea id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                <textarea id="message" class="form-control form-control-lg" rows="5" placeholder="Your Message" required></textarea>
               </div>
               <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary btn-lg px-5 animate-btn">Send Message</button>
+                <button type="submit" class="btn btn-gradient btn-lg px-5 mt-3 shadow-sm">Send via WhatsApp</button>
               </div>
             </div>
           </form>
@@ -760,42 +1364,13 @@
   </div>
 </section>
 
-
-<script>
-  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    // Replace with your WhatsApp number (with country code, no + sign)
-    let phoneNumber = "916369965602"; // Example: 91 for India
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let subject = document.getElementById("subject").value;
-    let message = document.getElementById("message").value;
-
-    let whatsappMessage = `Hello, I am ${name} (%20${email}%20).\nSubject: ${subject}\nMessage: ${message}`;
-
-    let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-    window.open(url, "_blank"); // Opens WhatsApp in new tab
-  });
-</script>
-
-          
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Map Section -->
+<!-- Map Section -->
 <section id="map" class="p-0">
   <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0816398857797!2d78.07145377411052!3d9.885661275248498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00f01a1a3a2a8b%3A0x92d72a345c67cfcb!2s6th%20Stop%2C%20Thirunagar%2C%20Madurai%2C%20Tamil%20Nadu%20625006!5e0!3m2!1sen!2sin!4v1724064585291!5m2!1sen!2sin" 
-    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
   </iframe>
 </section>
-
 
 <!-- Footer Section -->
 <footer class="py-5 text-light" style="background: linear-gradient(135deg, #0d47a1, #1976d2);">
@@ -806,7 +1381,7 @@
       <div class="col-md-3 mb-4">
         <h5 class="fw-bold">ZSOS IT Solutions</h5>
         <p>Innovating the future, one solution at a time.  
-        We provide IT consulting, AI solutions, cybersecurity, and digital transformation.</p>
+        We provide IT consulting, AI, cybersecurity, and digital transformation.</p>
       </div>
       
       <!-- Quick Links -->
@@ -824,7 +1399,7 @@
       <!-- Contact Info -->
       <div class="col-md-3 mb-4">
         <h5 class="fw-bold">Contact</h5>
-        <p><i class="bi bi-geo-alt-fill me-2"></i> Tamil Nadu, India</p>
+        <p><i class="bi bi-geo-alt-fill me-2"></i>Tamil Nadu, India</p>
         <p><i class="bi bi-envelope-fill me-2"></i> zsositsolutions@gmail.com</p>
         <p><i class="bi bi-telephone-fill me-2"></i> +91 6369965602</p>
       </div>
@@ -836,21 +1411,12 @@
           <input type="email" class="form-control me-2" placeholder="Enter email" required>
           <button class="btn btn-warning">Subscribe</button>
         </form>
-      <div class="mt-3">
-  <a href="https://www.facebook.com/" target="_blank" class="text-light fs-4 me-3 social-icon">
-    <i class="bi bi-facebook"></i>
-  </a>
-  <a href="https://twitter.com/" target="_blank" class="text-light fs-4 me-3 social-icon">
-    <i class="bi bi-twitter"></i>
-  </a>
-  <a href="https://www.linkedin.com/" target="_blank" class="text-light fs-4 me-3 social-icon">
-    <i class="bi bi-linkedin"></i>
-  </a>
-  <a href="https://www.instagram.com/zsos_it_solutions_?igsh=Y3V0Y3k0MHlzM3Zr" target="_blank" class="text-light fs-4 social-icon">
-    <i class="bi bi-instagram"></i>
-  </a>
-</div>
-
+        <div class="mt-3">
+          <a href="https://www.facebook.com/" target="_blank" class="text-light fs-4 me-3 social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/" target="_blank" class="text-light fs-4 me-3 social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" class="text-light fs-4 me-3 social-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/zsos_it_solutions_?igsh=Y3V0Y3k0MHlzM3Zr" target="_blank" class="text-light fs-4 social-icon"><i class="bi bi-instagram"></i></a>
+        </div>
       </div>
     </div>
 
@@ -861,15 +1427,41 @@
 
 <!-- Extra Styling -->
 <style>
+  .btn-gradient {
+    background: linear-gradient(45deg, #0d47a1, #1976d2);
+    border: none;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .btn-gradient:hover {
+    background: linear-gradient(45deg, #1976d2, #42a5f5);
+    transform: scale(1.05);
+  }
   footer a:hover {
     color: #ffeb3b !important;
-    transform: scale(1.1);
+    transform: scale(1.15);
     transition: all 0.3s ease;
   }
   .social-icon:hover {
     color: #ffeb3b !important;
   }
 </style>
+
+<!-- WhatsApp Script -->
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let phoneNumber = "916369965602"; 
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappMessage = `Hello, I am ${name} (${email}).%0ASubject: ${subject}%0AMessage: ${message}`;
+    let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(url, "_blank");
+  });
+</script>
 
 
   <!-- Floating Buttons -->
